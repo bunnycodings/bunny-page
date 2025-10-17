@@ -1,0 +1,144 @@
+/* Navbar styles */
+.navbar {
+  background-color: #1a1a1a;
+  width: 100%;
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.navbar-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Logo box */
+.logo-box {
+  border: 1px solid #fff;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+}
+
+.logo-text {
+  color: #4a9a9a;
+  font-family: 'Courier New', monospace;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+/* Navigation links */
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: #4a9a9a;
+}
+
+.nav-link.active {
+  color: #4a9a9a;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #4a9a9a;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* Contact button */
+.contact-btn {
+  background: linear-gradient(90deg, #4a9a9a 0%, #2c5f5f 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(74, 154, 154, 0.3);
+}
+
+/* Navbar separator */
+.navbar-separator {
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+  margin-top: 80px; /* Adjust based on navbar height */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem;
+  }
+  
+  .navbar-content {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .nav-links {
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .nav-link {
+    font-size: 0.9rem;
+  }
+  
+  .contact-btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+  
+  .navbar-separator {
+    margin-top: 120px; /* Adjust for mobile navbar height */
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-links {
+    gap: 0.5rem;
+  }
+  
+  .nav-link {
+    font-size: 0.8rem;
+  }
+  
+  .logo-text {
+    font-size: 0.9rem;
+  }
+}
