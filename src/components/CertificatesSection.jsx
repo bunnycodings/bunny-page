@@ -51,32 +51,6 @@ function CertificatesSection() {
           ))}
         </div>
 
-        {/* QRZ Links */}
-        <div className="qrz-links">
-          <h3 className="qrz-title">Visit on QRZ.com</h3>
-          <div className="qrz-buttons">
-            <a 
-              href="https://www.qrz.com/db/9W3SWP" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="qrz-link"
-            >
-              <span className="qrz-icon">📻</span>
-              <span>9W3SWP</span>
-              <span className="external-icon">↗</span>
-            </a>
-            <a 
-              href="https://www.qrz.com/db/E26AFI" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="qrz-link"
-            >
-              <span className="qrz-icon">📻</span>
-              <span>E26AFI</span>
-              <span className="external-icon">↗</span>
-            </a>
-          </div>
-        </div>
       </div>
     </section>
   )
